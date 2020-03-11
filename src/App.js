@@ -1,25 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+  Link
+} from "react-router-dom";
+
+import routes from "./routes";
+import "./App.scss";
+
+const loading = () => <div>Loading...</div>;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={loading()}>
+      <Router>
+        <div className="App">
+          <section className="section">
+            <div className="container">
+              <nav
+                className="navbar"
+                role="navigation"
+                aria-label="main navigation"
+              >
+                <div className="navbar-brand">
+                  <Link to="/" className="navbar-item">
+                    microTensor
+                  </Link>
+                </div>
+                <div className="navbar-end">
+                  <Link className="navbar-item" to="/get_started">
+                    Get Started
+                  </Link>
+                  <Link className="navbar-item" to="/docs">
+                    Docs
+                  </Link>
+                  <a className="navbar-item" href="https://github.com/utensor">
+                    <i className="fab fa-github"></i>
+                  </a>
+                  <a className="navbar-item" href="https://github.com/utensor">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a className="navbar-item" href="https://github.com/utensor">
+                    <i className="fab fa-slack"></i>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </section>
+          <Switch>
+            {routes.map((route, idx) => {
+              return route.component ? (
+                <Route
+                  key={idx}
+                  path={route.path}
+                  exact={route.exact}
+                  name={route.name}
+                  render={props => <route.component {...props} />}
+                />
+              ) : null;
+            })}
+            <Redirect to="/" />
+          </Switch>
+        </div>
+      </Router>
+    </Suspense>
   );
 }
 

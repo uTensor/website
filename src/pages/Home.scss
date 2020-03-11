@@ -1,0 +1,36 @@
+.intro {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 220px;
+}
+.features {
+  margin: 250px auto;
+  .feature-title {
+    font-size: 32px;
+    margin: 20px auto;
+  }
+}
+.quick-start {
+  margin: 50px auto;
+  .quick-start-code {
+    height: 700px;
+    padding: 20px;
+    background-color: #232121;
+    border-radius: 10px;
+    color: whitesmoke;
+  }
+}
+.community {
+  text-align: center;
+  margin: 200px auto;
+  .community-title {
+    font-size: 48px;
+  }
+  .community-link-container {
+    margin: 50px;
+  }
+  .community-link {
+    margin: 20px;
+    font-size: 24px;
+  }
+}
