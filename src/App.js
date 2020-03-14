@@ -15,7 +15,7 @@ const loading = () => <div>Loading...</div>;
 function App() {
   return (
     <Suspense fallback={loading()}>
-      <Router>
+      <Router basename={`${process.env.PUBLIC_URL}/`}>
         <div className="App">
           <section className="section">
             <div className="container">
