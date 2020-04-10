@@ -1,11 +1,5 @@
 import React, { Suspense } from "react";
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-  Link
-} from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch, Link } from "react-router-dom";
 
 import routes from "./routes";
 import "./App.scss";
@@ -15,7 +9,7 @@ const loading = () => <div>Loading...</div>;
 function App() {
   return (
     <Suspense fallback={loading()}>
-      <Router basename="/">
+      <BrowserRouter>
         <div className="App">
           <section className="section">
             <div className="container">
@@ -57,14 +51,14 @@ function App() {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  render={props => <route.component {...props} />}
+                  render={(props) => <route.component {...props} />}
                 />
               ) : null;
             })}
             <Redirect to="/" />
           </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
     </Suspense>
   );
 }
