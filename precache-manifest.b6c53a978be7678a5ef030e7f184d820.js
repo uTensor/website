@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "231f07151b5dd77b4b5af9e92371b3e4",
+    "revision": "376038bbb88b5ad669aabaa2ab046a41",
     "url": "/website/index.html"
   },
   {
-    "revision": "daa13304f9c9eb43ff75",
-    "url": "/website/static/css/main.4342f84f.chunk.css"
+    "revision": "72ec1babf3d28031186f",
+    "url": "/website/static/css/main.f0591c50.chunk.css"
   },
   {
     "revision": "4ae48328a6c356560838",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/website/static/js/2.2f22f4c1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "daa13304f9c9eb43ff75",
-    "url": "/website/static/js/main.c23806ec.chunk.js"
+    "revision": "72ec1babf3d28031186f",
+    "url": "/website/static/js/main.0efa644d.chunk.js"
   },
   {
     "revision": "3afed8d01a6bc57fff4d",
     "url": "/website/static/js/runtime-main.6fed7f67.js"
+  },
+  {
+    "revision": "a1409fdeb101b0ae4569b1e0d4ff3c33",
+    "url": "/website/static/media/Changa-VariableFont_wght.a1409fde.ttf"
   },
   {
     "revision": "2505bfbd9bde14a7829cc8c242a0d25c",
