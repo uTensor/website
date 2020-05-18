@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Component, Suspense } from "react";
 import { BrowserRouter, Redirect, Route, Switch, Link } from "react-router-dom";
 
 import routes from "./routes";
@@ -6,43 +6,67 @@ import "./App.scss";
 
 const loading = () => <div>Loading...</div>;
 
-function App() {
-  return (
-    <Suspense fallback={loading()}>
-      <BrowserRouter>
-        <div className="App">
-          <section className="section">
+class App extends Component {
+  state = {
+    showNav: false,
+  };
+
+  toggleNavBar = () => {
+    this.setState({
+      showNav: !this.state.showNav,
+    });
+  };
+
+  render() {
+    return (
+      <Suspense fallback={loading()}>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <nav
+            className="navbar"
+            role="navigation"
+            aria-label="main navigation"
+          >
             <div className="container">
-              <nav
-                className="navbar"
-                role="navigation"
-                aria-label="main navigation"
-              >
-                <div className="navbar-brand">
-                  <Link to="/" className="navbar-item">
-                    microTensor
-                  </Link>
+              <div className="navbar-brand">
+                <Link to="/" className="navbar-item">
+                  uTensor
+                </Link>
+                <div
+                  className="navbar-burger burger"
+                  data-target="navMenu"
+                  onClick={this.toggleNavBar}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
+              </div>
+              <div
+                className={
+                  this.state.showNav ? "navbar-menu is-active" : "navbar-menu"
+                }
+                id="navMenu"
+              >
                 <div className="navbar-end">
                   <Link className="navbar-item" to="/get_started">
-                    Get Started
+                    Jump Start
                   </Link>
                   <Link className="navbar-item" to="/docs">
                     Docs
                   </Link>
                   <a className="navbar-item" href="https://github.com/utensor">
+                    Join
+                  </a>
+                  <a className="navbar-item" href="https://github.com/utensor">
+                    Donate
+                  </a>
+                  <a className="navbar-item" href="https://github.com/utensor">
                     <i className="fab fa-github"></i>
                   </a>
-                  <a className="navbar-item" href="https://github.com/utensor">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="navbar-item" href="https://github.com/utensor">
-                    <i className="fab fa-slack"></i>
-                  </a>
                 </div>
-              </nav>
+              </div>
             </div>
-          </section>
+          </nav>
           <Switch>
             {routes.map((route, idx) => {
               return route.component ? (
@@ -57,10 +81,17 @@ function App() {
             })}
             <Redirect to="/" />
           </Switch>
-        </div>
-      </BrowserRouter>
-    </Suspense>
-  );
+          <footer className="footer">
+            <div className="content has-text-centered">
+              <p className="has-text-primary">
+                <i className="fas fa-heart"></i> by uTensor
+              </p>
+            </div>
+          </footer>
+        </BrowserRouter>
+      </Suspense>
+    );
+  }
 }
 
 export default App;

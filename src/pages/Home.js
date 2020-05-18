@@ -2,86 +2,179 @@ import React, { Component } from "react";
 import "./Home.scss";
 
 class Index extends Component {
+  state = {
+    displayGenerateCode: true,
+  };
+
+  handleChangeDisplayCode = () => {
+    this.setState({
+      displayGenerateCode: !this.state.displayGenerateCode,
+    });
+  };
+
   render() {
+    const { displayGenerateCode } = this.state;
+    const codeFeature = displayGenerateCode ? (
+      <ul>
+        <li>
+          Tensor provide abstractions for memory devices (RAM, ROM,
+          storage-devices, connectivity, etc)
+        </li>
+        <li>
+          Operator classes allow silicon providers to extend uTensor runtime
+          with their own optimized kernels.
+        </li>
+        <li>All memory usage can be governed by a predefined amount</li>
+        <li>Very low static and fixed dynamic memory footprint</li>
+        <li>Quantized Operations</li>
+        <li>Hand-codable, readable and debuggable C++</li>
+      </ul>
+    ) : (
+      <ul>
+        <li>The model is built with TensorFlow</li>
+        <li>
+          With a single function call, C++ files are generated from the trained
+          model
+        </li>
+        <li>Actions behind the scene:</li>
+        <ul>
+          <li>Dropout removal</li>
+          <li>Quantization</li>
+          <li>Offline Memory Planning</li>
+          <li>Out-of-order Execution Planning</li>
+          <li>Graph-rewriting (Node fusion and replacement)</li>
+        </ul>
+        <li>Multi-training framework and runtime support to come</li>
+      </ul>
+    );
     return (
       <div>
-        <section>
-          <div className="container">
-            <div className="intro">
-              Extremely light-weight machine learning inference framework built
-              on Mbed and Tensorflow.
+        <section className="hero is-primary is-bold is-fullheight-with-navbar">
+          <div className="hero-body">
+            <div className="container">
+              <div className="columns">
+                <h1 className="column is-size-1 has-text-centered">
+                  Hands on Embedded Machine Learning
+                </h1>
+              </div>
+              <div className="columns">
+                <div className="column is-size-4 has-text-right has-text-centered-mobile">
+                  built by innovators & for the creators
+                </div>
+              </div>
+              <div className="columns">
+                <div className="column is-size-5 intro">
+                  uTensor is a completely free and open source embedded machine
+                  learning infrastructure designed for rapid-prototyping and
+                  deployment. At the present, the project includes an inference
+                  engine, a highly customizable graph processing tool and a data
+                  collection framework (work-in-progress). The device code is
+                  optimized for hardware with only a few kilobytes of memory.
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <section>
-          <div className="container">
-            <div className="features">
-              <div className="columns">
+        <section className="hero is-medium is-light">
+          <div className="hero-body">
+            <div className="container">
+              <div className="columns is-variable is-7">
                 <div className="column">
-                  <i className="fas fa-tachometer-alt fa-2x"></i>
-                  <div className="feature-title title">Fast and Small</div>
-                  <div className="feature-detail">
-                    The uTensor core runtime takes full advantage of the Arm
-                    CMSIS-NN kernels, making your models run wicked quick in a
-                    small footprint!
-                  </div>
+                  <h3 className="is-size-3">Embedded Runtime</h3>
+                  <p>
+                    The core of uTensor is written in C++ and compiles down to
+                    less than 2 kilobytes. It supports both online and offline
+                    planning for various memory units making it friendly to
+                    integrate with your embedded project. Debugging and
+                    extending the project is also super easy.
+                  </p>
                 </div>
                 <div className="column">
-                  <i className="fas fa-users fa-2x"></i>
-                  <div className="feature-title title">Developer friendly</div>
-                  <div className="feature-detail">
-                    Hand crafting neural nets for embedded systems is a real
-                    pain in the uTensor, so we provide a toolchain for quickly
-                    generating C++ models so you don't have to!
-                  </div>
+                  <h3 className="is-size-3">Simple Deployment</h3>
+                  <p>
+                    uTensor is designed to enable embedded engineers and data
+                    scientists to work with each other. Given a trained model,
+                    C++ implementation of the model is generated from the
+                    Jupyter-notebook with a single function call. The C++ source
+                    code is then copy-and-pasted into the embedded project
+                    folder to integrate with the application code.
+                  </p>
                 </div>
                 <div className="column">
-                  <i className="fas fa-sliders-h fa-2x"></i>
-                  <div className="feature-title title">Easy Customization</div>
-                  <div className="feature-detail">
-                    With uTensor it's easy to add new operators, specify where
-                    tensors exist in memory, and even add automatic graph
-                    optimiziation passes!
+                  <h3 className="is-size-3">Graph Processing</h3>
+                  <p>
+                    The advancement of embedded machine learning will come from
+                    the ability to quickly experiment and test novel ideas. The
+                    SDK is written in Python, enabling anyone to leverage
+                    uTensor's existing toolchain for their research and
+                    prototypes.
+                  </p>
+                </div>
+                <div className="column">
+                  <h3 className="is-size-3">Open Ecosystem</h3>
+                  <p>
+                    The uTensor inference framework is not owned by anyone. We
+                    welcome anyone to join us in pushing the boundaries of
+                    machine learning and edge computing. The project currently
+                    supports Mbed and Tensorflow. The support of Arduino,
+                    PyTorch and others are under development and will be
+                    available soon.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="hero">
+          <div className="hero-body">
+            <div className="container">
+              <div className="buttons has-addons is-centered">
+                <button
+                  className={
+                    displayGenerateCode
+                      ? "button is-primary"
+                      : "button is-primary is-outlined"
+                  }
+                  onClick={this.handleChangeDisplayCode}
+                >
+                  Generated Code
+                </button>
+                <button
+                  className={
+                    displayGenerateCode
+                      ? "button is-primary is-outlined"
+                      : "button is-primary"
+                  }
+                  onClick={this.handleChangeDisplayCode}
+                >
+                  Training Code
+                </button>
+              </div>
+              <div className="tile is-ancestor">
+                <div className="tile is-parent is-8">
+                  <div className="tile is-child box" id="code"></div>
+                </div>
+                <div className="tile is-parent">
+                  <div className="tile is-child box">
+                    <div className="content">{codeFeature}</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section>
-          <div className="container">
-            <div className="quick-start">
-              <h1 className="title is-2">Quick Start</h1>
-              <div className="columns">
-                <div className="column is-two-thirds">
-                  <div className="quick-start-code">This is code part.</div>
-                </div>
-                <div className="column">
-                  <div className="title is-3">Features</div>
-                  <div className="content">
-                    <ul type="1">
-                      <li>Feature 1</li>
-                      <li>Feature 2</li>
-                      <li>Feature 3</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="container">
-            <div className="community">
-              <div className="community-title">
+        <section className="hero is-medium is-dark is-bold">
+          <div className="hero-body">
+            <div className="container">
+              <div className="is-size-2 has-text-centered">
                 Join the microTensor Communtiy
               </div>
-              <div className="community-link-container">
-                <a className="community-link" href="/">
+              <div className="has-text-centered community-link-container">
+                <a className="is-size-4 community-link" href="/">
                   Donate
                 </a>
                 •
-                <a className="community-link" href="/">
+                <a className="is-size-4 community-link" href="/">
                   Get in Touch
                 </a>
               </div>

@@ -1,8 +1,15 @@
-// Set our brand colors
+// Customize
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"), url(assets/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
+}
+
 $utensor-blue: #0f91a8;
 
-// // Update Bulma's global variables
+// Update Bulma's global variables
 $link: $utensor-blue;
+$primary: $utensor-blue;
+$family-primary: "Ubuntu";
 
 // Import only what we need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -12,4 +19,6 @@ $link: $utensor-blue;
 @import "../node_modules/bulma/sass/elements/container.sass";
 @import "../node_modules/bulma/sass/elements/content.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
 @import "../node_modules/bulma/sass/components/navbar.sass";
