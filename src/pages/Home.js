@@ -49,21 +49,21 @@ class Index extends Component {
     );
     return (
       <div>
-        <section className="hero is-primary is-bold is-fullheight-with-navbar">
+        <section className="hero is-primary is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container">
               <div className="columns">
-                <h1 className="column is-size-1 has-text-centered">
+                <h1 className="column is-size-1 has-text-centered is-pink">
                   Hands on Embedded Machine Learning
                 </h1>
               </div>
               <div className="columns">
-                <div className="column is-size-4 has-text-right has-text-centered-mobile">
+                <div className="column is-size-4 has-text-centered-mobile is-pink is-offset-8">
                   built by innovators & for the creators
                 </div>
               </div>
               <div className="columns">
-                <div className="column is-size-5 intro">
+                <div className="column is-size-5 is-three-fifths is-offset-1 is-family-secondary">
                   uTensor is a completely free and open source embedded machine
                   learning infrastructure designed for rapid-prototyping and
                   deployment. At the present, the project includes an inference
@@ -81,7 +81,7 @@ class Index extends Component {
               <div className="columns is-variable is-7">
                 <div className="column">
                   <h3 className="is-size-3">Embedded Runtime</h3>
-                  <p>
+                  <p className="is-family-secondary">
                     The core of uTensor is written in C++ and compiles down to
                     less than 2 kilobytes. It supports both online and offline
                     planning for various memory units making it friendly to
@@ -91,7 +91,7 @@ class Index extends Component {
                 </div>
                 <div className="column">
                   <h3 className="is-size-3">Simple Deployment</h3>
-                  <p>
+                  <p className="is-family-secondary">
                     uTensor is designed to enable embedded engineers and data
                     scientists to work with each other. Given a trained model,
                     C++ implementation of the model is generated from the
@@ -102,7 +102,7 @@ class Index extends Component {
                 </div>
                 <div className="column">
                   <h3 className="is-size-3">Graph Processing</h3>
-                  <p>
+                  <p className="is-family-secondary">
                     The advancement of embedded machine learning will come from
                     the ability to quickly experiment and test novel ideas. The
                     SDK is written in Python, enabling anyone to leverage
@@ -112,7 +112,7 @@ class Index extends Component {
                 </div>
                 <div className="column">
                   <h3 className="is-size-3">Open Ecosystem</h3>
-                  <p>
+                  <p className="is-family-secondary">
                     The uTensor inference framework is not owned by anyone. We
                     welcome anyone to join us in pushing the boundaries of
                     machine learning and edge computing. The project currently
@@ -126,7 +126,7 @@ class Index extends Component {
           </div>
         </section>
         <section className="hero">
-          <div className="hero-body">
+          <div className="hero-body is-background-pink">
             <div className="container">
               <div className="buttons has-addons is-centered">
                 <button
@@ -156,25 +156,28 @@ class Index extends Component {
                 </div>
                 <div className="tile is-parent">
                   <div className="tile is-child box">
-                    <div className="content">{codeFeature}</div>
+                    <div className="content is-family-secondary">
+                      <h4>Feature</h4>
+                      {codeFeature}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="hero is-medium is-dark is-bold">
+        <section className="hero is-medium">
           <div className="hero-body">
             <div className="container">
-              <div className="is-size-2 has-text-centered">
-                Join the microTensor Communtiy
+              <div className="is-size-2 has-text-centered has-text-primary">
+                Join the uTensor Communtiy
               </div>
-              <div className="has-text-centered community-link-container">
-                <a className="is-size-4 community-link" href="/">
+              <div className="has-text-centered">
+                <a className="is-size-4 community-link is-pink" href="/">
                   Donate
                 </a>
                 •
-                <a className="is-size-4 community-link" href="/">
+                <a className="is-size-4 community-link is-pink" href="/">
                   Get in Touch
                 </a>
               </div>

@@ -1,15 +1,23 @@
 // Customize
 @font-face {
+  font-family: "Changa";
+  src: local("Changa"),
+    url(assets/Changa/Changa-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Ubuntu";
   src: local("Ubuntu"), url(assets/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
 }
 
-$utensor-blue: #0f91a8;
-
+$utensor-blue: #0a3d64;
+$utensor-pink: #ddb0a7;
 // Update Bulma's global variables
 $link: $utensor-blue;
+$link-hover: $utensor-blue;
 $primary: $utensor-blue;
-$family-primary: "Ubuntu";
+$family-primary: "Changa";
+$family-secondary: "Ubuntu";
 
 // Import only what we need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";

@@ -1,12 +1,17 @@
+$utensor-pink: #ddb0a7;
+
 #code {
   background-color: #2d2d2d;
 }
 
 .community-link {
   margin: 20px;
-  color: white;
 }
 
-.intro {
-  margin: 50px;
+.is-pink {
+  color: $utensor-pink;
+}
+
+.is-background-pink {
+  background-color: $utensor-pink;
 }

@@ -28,7 +28,7 @@ class App extends Component {
           >
             <div className="container">
               <div className="navbar-brand">
-                <Link to="/" className="navbar-item">
+                <Link to="/" className="navbar-item changa-font">
                   uTensor
                 </Link>
                 <div
@@ -48,19 +48,28 @@ class App extends Component {
                 id="navMenu"
               >
                 <div className="navbar-end">
-                  <Link className="navbar-item" to="/get_started">
+                  <Link className="navbar-item changa-font" to="/get_started">
                     Jump Start
                   </Link>
-                  <Link className="navbar-item" to="/docs">
+                  <Link className="navbar-item changa-font" to="/docs">
                     Docs
                   </Link>
-                  <a className="navbar-item" href="https://github.com/utensor">
+                  <a
+                    className="navbar-item changa-font"
+                    href="https://github.com/utensor"
+                  >
                     Join
                   </a>
-                  <a className="navbar-item" href="https://github.com/utensor">
+                  <a
+                    className="navbar-item changa-font"
+                    href="https://github.com/utensor"
+                  >
                     Donate
                   </a>
-                  <a className="navbar-item" href="https://github.com/utensor">
+                  <a
+                    className="navbar-item changa-font"
+                    href="https://github.com/utensor"
+                  >
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -83,7 +92,7 @@ class App extends Component {
           </Switch>
           <footer className="footer">
             <div className="content has-text-centered">
-              <p className="has-text-primary">
+              <p className="has-text-primary changa-font">
                 <i className="fas fa-heart"></i> by uTensor
               </p>
             </div>
