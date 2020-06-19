@@ -57,9 +57,12 @@ class App extends Component {
                   >
                     Jump Start
                   </a>
-                  <Link className="navbar-item ubuntu-font" to="/docs">
+                  <a
+                    className="navbar-item ubuntu-font"
+                    href="https://github.com/uTensor/website/blob/master/docs.md"
+                  >
                     Docs
-                  </Link>
+                  </a>
                   <a
                     className="navbar-item ubuntu-font"
                     href="https://utensor.slack.com/join/shared_invite/zt-6vf9jocy-lzk5Aw11Z8M9GPf_KS5I~Q#/"
