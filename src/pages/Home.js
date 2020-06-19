@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./Home.scss";
+import demoVideo from "../assets/uTensor-mNIST-demo.mp4";
+import utensorPicture from "../assets/utensor.png";
+import GeneratedCode from "../components/GeneratedCode";
+import TrainingCode from "../components/TrainingCode";
 
 class Index extends Component {
   state = {
@@ -49,21 +53,26 @@ class Index extends Component {
     );
     return (
       <div>
-        <section className="hero is-primary is-fullheight-with-navbar">
-          <div className="hero-body">
+        <section className="hero is-fullheight-with-navbar video">
+          <div className="hero-video">
+            <video playsInline autoPlay muted loop className="video-background">
+              <source src={demoVideo} type="video/mp4" />
+            </video>
+          </div>
+          <div className="hero-body video-cover">
             <div className="container">
               <div className="columns">
-                <h1 className="column is-size-1 has-text-centered is-pink">
+                <h1 className="column is-size-1 has-text-centered noto-sans-font cover-title">
                   Hands on Embedded Machine Learning
                 </h1>
               </div>
               <div className="columns">
-                <div className="column is-size-4 has-text-centered-mobile is-pink is-offset-8">
+                <div className="column is-size-3 has-text-centered-touch is-offset-6 noto-sans-font cover-subtitle">
                   built by innovators & for the creators
                 </div>
               </div>
               <div className="columns">
-                <div className="column is-size-5 is-three-fifths is-offset-1 is-family-secondary">
+                <div className="column is-size-5 is-6-desktop is-10 is-offset-1-desktop has-text-centered-tablet noto-sans-font cover-detail">
                   uTensor is a completely free and open source embedded machine
                   learning infrastructure designed for rapid-prototyping and
                   deployment. At the present, the project includes an inference
@@ -75,50 +84,43 @@ class Index extends Component {
             </div>
           </div>
         </section>
+        <section className="hero is-hidden-tablet">
+          <video playsInline autoPlay muted loop className="video">
+            <source src={demoVideo} type="video/mp4" />
+          </video>
+        </section>
         <section className="hero is-medium is-light">
           <div className="hero-body">
             <div className="container">
               <div className="columns is-variable is-7">
                 <div className="column">
-                  <h3 className="is-size-3">Embedded Runtime</h3>
-                  <p className="is-family-secondary">
-                    The core of uTensor is written in C++ and compiles down to
-                    less than 2 kilobytes. It supports both online and offline
-                    planning for various memory units making it friendly to
-                    integrate with your embedded project. Debugging and
-                    extending the project is also super easy.
+                  <h3 className="is-size-3 ubuntu-font">Embedded Runtime</h3>
+                  <p className="noto-sans-font">
+                    As little as 2kb, C++ graph implementations can be either
+                    hand-coded or auto-generated from trained models.
                   </p>
                 </div>
                 <div className="column">
-                  <h3 className="is-size-3">Simple Deployment</h3>
-                  <p className="is-family-secondary">
-                    uTensor is designed to enable embedded engineers and data
-                    scientists to work with each other. Given a trained model,
-                    C++ implementation of the model is generated from the
-                    Jupyter-notebook with a single function call. The C++ source
-                    code is then copy-and-pasted into the embedded project
-                    folder to integrate with the application code.
+                  <h3 className="is-size-3 ubuntu-font">Simple Deployment</h3>
+                  <p className="noto-sans-font">
+                    From Jupyter-notebooks to MCUs, uTensor is the channel for
+                    data scientists and embedded engineers.
                   </p>
                 </div>
                 <div className="column">
-                  <h3 className="is-size-3">Graph Processing</h3>
-                  <p className="is-family-secondary">
-                    The advancement of embedded machine learning will come from
-                    the ability to quickly experiment and test novel ideas. The
-                    SDK is written in Python, enabling anyone to leverage
-                    uTensor's existing toolchain for their research and
-                    prototypes.
+                  <h3 className="is-size-3 ubuntu-font">Graph Processing</h3>
+                  <p className="noto-sans-font">
+                    Innovating in embedded-ML requires rapid iteration of ideas.
+                    uTensor SDK provides easily-customizable graph transformers
+                    in Python.
                   </p>
                 </div>
                 <div className="column">
-                  <h3 className="is-size-3">Open Ecosystem</h3>
-                  <p className="is-family-secondary">
-                    The uTensor inference framework is not owned by anyone. We
-                    welcome anyone to join us in pushing the boundaries of
-                    machine learning and edge computing. The project currently
-                    supports Mbed and Tensorflow. The support of Arduino,
-                    PyTorch and others are under development and will be
-                    available soon.
+                  <h3 className="is-size-3 ubuntu-font">Open Ecosystem</h3>
+                  <p className="noto-sans-font">
+                    uTensor is an embedded-ML infrastructure. Bring your own
+                    ops, graph-transformations, or port it to new platforms; it
+                    is for everyone.
                   </p>
                 </div>
               </div>
@@ -126,7 +128,14 @@ class Index extends Component {
           </div>
         </section>
         <section className="hero">
-          <div className="hero-body is-background-pink">
+          <div className="hero-body">
+            <div className="utensor-picture">
+              <img alt="utensor" src={utensorPicture}></img>
+            </div>
+          </div>
+        </section>
+        <section className="hero">
+          <div className="hero-body is-background-utensor">
             <div className="container">
               <div className="buttons has-addons is-centered">
                 <button
@@ -152,12 +161,13 @@ class Index extends Component {
               </div>
               <div className="tile is-ancestor">
                 <div className="tile is-parent is-8">
-                  <div className="tile is-child box" id="code"></div>
+                  <div className="tile is-child code-content">
+                    {displayGenerateCode ? <GeneratedCode /> : <TrainingCode />}
+                  </div>
                 </div>
                 <div className="tile is-parent">
-                  <div className="tile is-child box">
+                  <div className="tile is-child code-explain">
                     <div className="content is-family-secondary">
-                      <h4>Feature</h4>
                       {codeFeature}
                     </div>
                   </div>
@@ -170,14 +180,20 @@ class Index extends Component {
           <div className="hero-body">
             <div className="container">
               <div className="is-size-2 has-text-centered has-text-primary">
-                Join the uTensor Communtiy
+                Join the uTensor Community
               </div>
               <div className="has-text-centered">
-                <a className="is-size-4 community-link is-pink" href="/">
+                <a
+                  className="is-size-4 community-link is-secondary-color"
+                  href="https://opencollective.com/utensorai"
+                >
                   Donate
                 </a>
                 •
-                <a className="is-size-4 community-link is-pink" href="/">
+                <a
+                  className="is-size-4 community-link is-secondary-color"
+                  href="https://utensor.slack.com/join/shared_invite/zt-6vf9jocy-lzk5Aw11Z8M9GPf_KS5I~Q#/"
+                >
                   Get in Touch
                 </a>
               </div>

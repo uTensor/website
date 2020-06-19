@@ -28,7 +28,10 @@ class App extends Component {
           >
             <div className="container">
               <div className="navbar-brand">
-                <Link to="/" className="navbar-item changa-font">
+                <Link
+                  to="/"
+                  className="navbar-item noto-sans-font has-text-primary has-text-weight-semibold"
+                >
                   uTensor
                 </Link>
                 <div
@@ -48,26 +51,29 @@ class App extends Component {
                 id="navMenu"
               >
                 <div className="navbar-end">
-                  <Link className="navbar-item changa-font" to="/get_started">
+                  <a
+                    className="navbar-item ubuntu-font"
+                    href="https://github.com/uTensor/utensor-helloworld"
+                  >
                     Jump Start
-                  </Link>
-                  <Link className="navbar-item changa-font" to="/docs">
+                  </a>
+                  <Link className="navbar-item ubuntu-font" to="/docs">
                     Docs
                   </Link>
                   <a
-                    className="navbar-item changa-font"
-                    href="https://github.com/utensor"
+                    className="navbar-item ubuntu-font"
+                    href="https://utensor.slack.com/join/shared_invite/zt-6vf9jocy-lzk5Aw11Z8M9GPf_KS5I~Q#/"
                   >
                     Join
                   </a>
                   <a
-                    className="navbar-item changa-font"
-                    href="https://github.com/utensor"
+                    className="navbar-item ubuntu-font"
+                    href="https://opencollective.com/utensorai"
                   >
                     Donate
                   </a>
                   <a
-                    className="navbar-item changa-font"
+                    className="navbar-item ubuntu-font"
                     href="https://github.com/utensor"
                   >
                     <i className="fab fa-github"></i>
@@ -92,7 +98,7 @@ class App extends Component {
           </Switch>
           <footer className="footer">
             <div className="content has-text-centered">
-              <p className="has-text-primary changa-font">
+              <p className="has-text-primary noto-sans-font">
                 <i className="fas fa-heart"></i> by uTensor
               </p>
             </div>

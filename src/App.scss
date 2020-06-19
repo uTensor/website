@@ -10,14 +10,23 @@
   src: local("Ubuntu"), url(assets/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
 }
 
-$utensor-blue: #0a3d64;
-$utensor-pink: #ddb0a7;
+@font-face {
+  font-family: "NotoSans";
+  src: local("NotoSans"),
+    url(assets/Noto_Sans/NotoSans-Regular.ttf) format("truetype");
+}
+
+$utensor-primary: #0a3d64;
+$utensor-secondary: #ddb0a7;
+$utensor-blackground-color: hsl(0, 0%, 96%);
+
 // Update Bulma's global variables
-$link: $utensor-blue;
-$link-hover: $utensor-blue;
-$primary: $utensor-blue;
-$family-primary: "Changa";
+$link: $utensor-primary;
+$link-hover: $utensor-primary;
+$primary: $utensor-primary;
+$family-primary: "NotoSans";
 $family-secondary: "Ubuntu";
+$navbar-background-color: $utensor-blackground-color;
 
 // Import only what we need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
