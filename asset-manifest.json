@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.de7cc74a.chunk.css",
-    "main.js": "/website/static/js/main.b360c3db.chunk.js",
-    "main.js.map": "/website/static/js/main.b360c3db.chunk.js.map",
+    "main.css": "/website/static/css/main.ab434159.chunk.css",
+    "main.js": "/website/static/js/main.d7f1ac18.chunk.js",
+    "main.js.map": "/website/static/js/main.d7f1ac18.chunk.js.map",
     "runtime-main.js": "/website/static/js/runtime-main.6fed7f67.js",
     "runtime-main.js.map": "/website/static/js/runtime-main.6fed7f67.js.map",
-    "static/js/2.b574be14.chunk.js": "/website/static/js/2.b574be14.chunk.js",
-    "static/js/2.b574be14.chunk.js.map": "/website/static/js/2.b574be14.chunk.js.map",
+    "static/js/2.38d088de.chunk.js": "/website/static/js/2.38d088de.chunk.js",
+    "static/js/2.38d088de.chunk.js.map": "/website/static/js/2.38d088de.chunk.js.map",
     "index.html": "/website/index.html",
-    "precache-manifest.0cd9af8a6a48eee700cae624c6cde83d.js": "/website/precache-manifest.0cd9af8a6a48eee700cae624c6cde83d.js",
+    "precache-manifest.b01e79a8fa22866d5aa1d92f8cb641f4.js": "/website/precache-manifest.b01e79a8fa22866d5aa1d92f8cb641f4.js",
     "service-worker.js": "/website/service-worker.js",
-    "static/css/main.de7cc74a.chunk.css.map": "/website/static/css/main.de7cc74a.chunk.css.map",
-    "static/js/2.b574be14.chunk.js.LICENSE.txt": "/website/static/js/2.b574be14.chunk.js.LICENSE.txt",
+    "static/css/main.ab434159.chunk.css.map": "/website/static/css/main.ab434159.chunk.css.map",
+    "static/js/2.38d088de.chunk.js.LICENSE.txt": "/website/static/js/2.38d088de.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/website/static/media/Ubuntu-Regular.2505bfbd.ttf",
+    "static/media/github.svg": "/website/static/media/github.678688b2.svg",
+    "static/media/open-collective.svg": "/website/static/media/open-collective.8a4a52cb.svg",
+    "static/media/slack.svg": "/website/static/media/slack.125e7aab.svg",
     "static/media/uTensor-mNIST-demo.mp4": "/website/static/media/uTensor-mNIST-demo.bdbb13e7.mp4",
-    "static/media/utensor.png": "/website/static/media/utensor.330c0fe6.png"
+    "static/media/utensor.png": "/website/static/media/utensor.342335a1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6fed7f67.js",
-    "static/js/2.b574be14.chunk.js",
-    "static/css/main.de7cc74a.chunk.css",
-    "static/js/main.b360c3db.chunk.js"
+    "static/js/2.38d088de.chunk.js",
+    "static/css/main.ab434159.chunk.css",
+    "static/js/main.d7f1ac18.chunk.js"
   ]
 }
