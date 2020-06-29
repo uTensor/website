@@ -4,6 +4,7 @@
   max-width: 800px;
   margin: auto;
 }
+
 .code-content {
   border-radius: 6px;
   padding: 12px;
@@ -12,6 +13,7 @@
   background-color: #2d2d2d;
   overflow-x: scroll;
 }
+
 .code-explain {
   border-radius: 6px;
   padding: 4px;
@@ -43,6 +45,9 @@
   .cover-title {
     font-weight: bold;
   }
+  .cover-subtitle {
+    color: $utensor-secondary;
+  }
   @media only screen and (max-width: 769px) {
     background-color: hsl(0, 0%, 96%);
     .cover-title {
@@ -66,7 +71,10 @@
 }
 
 .community-link {
-  margin: 20px;
+  letter-spacing: 3px;
+  > img {
+    margin: auto 10px auto 0;
+  }
 }
 
 .is-secondary-color {

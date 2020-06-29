@@ -73,13 +73,13 @@ class App extends Component {
                     className="navbar-item ubuntu-font"
                     href="https://opencollective.com/utensorai"
                   >
-                    Donate
+                    Sponsor
                   </a>
                   <a
                     className="navbar-item ubuntu-font"
                     href="https://github.com/utensor"
                   >
-                    <i className="fab fa-github"></i>
+                    <i className="fab fa-github fa-lg"></i>
                   </a>
                 </div>
               </div>

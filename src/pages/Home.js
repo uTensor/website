@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Home.scss";
 import demoVideo from "../assets/uTensor-mNIST-demo.mp4";
 import utensorPicture from "../assets/utensor.png";
+import openCollective from "../assets/open-collective.svg";
+import github from "../assets/github.svg";
+import slack from "../assets/slack.svg";
 import GeneratedCode from "../components/GeneratedCode";
 import TrainingCode from "../components/TrainingCode";
 
@@ -72,13 +75,33 @@ class Index extends Component {
                 </div>
               </div>
               <div className="columns">
-                <div className="column is-size-5 is-6-desktop is-10 is-offset-1-desktop has-text-centered-tablet noto-sans-font cover-detail">
-                  uTensor is a completely free and open source embedded machine
+                <div className="column is-size-5 is-6-desktop is-9 is-offset-1-desktop has-text-left-tablet noto-sans-font cover-detail">
+                  uTensor is a free and open source embedded machine
                   learning infrastructure designed for rapid-prototyping and
-                  deployment. At the present, the project includes an inference
+                  deployment. The project includes an inference
                   engine, a highly customizable graph processing tool and a data
                   collection framework (work-in-progress). The device code is
                   optimized for hardware with only a few kilobytes of memory.
+                </div>
+              </div>
+              <div className="columns is-centered mt-3">
+                <div className="column is-narrow">
+                  <a
+                    className="is-size-6 community-link is-uppercase button"
+                    href="https://opencollective.com/utensorai"
+                  >
+                    <img alt="github" src={github} width="20" ></img>
+                    Contribute
+                  </a>
+                </div>
+                <div className="column is-narrow">
+                  <a
+                    className="is-size-6 community-link is-uppercase button"
+                    href="https://utensor.slack.com/join/shared_invite/zt-6vf9jocy-lzk5Aw11Z8M9GPf_KS5I~Q#/"
+                  >
+                    <img alt="slack" src={slack} width="20" ></img>
+                    Chat on Slack
+                  </a>
                 </div>
               </div>
             </div>
@@ -182,20 +205,36 @@ class Index extends Component {
               <div className="is-size-2 has-text-centered has-text-primary">
                 Join the uTensor Community
               </div>
-              <div className="has-text-centered">
-                <a
-                  className="is-size-4 community-link is-secondary-color"
-                  href="https://opencollective.com/utensorai"
-                >
-                  Donate
-                </a>
-                •
-                <a
-                  className="is-size-4 community-link is-secondary-color"
-                  href="https://utensor.slack.com/join/shared_invite/zt-6vf9jocy-lzk5Aw11Z8M9GPf_KS5I~Q#/"
-                >
-                  Get in Touch
-                </a>
+              <div className="mt-3">
+                <div className="columns is-centered">
+                  <div className="column is-narrow">
+                    <a
+                      className="is-size-4 community-link is-secondary-color is-uppercase"
+                      href="https://opencollective.com/utensorai"
+                    >
+                      <img alt="github" src={github} width="20" ></img>
+                      Contribute
+                    </a>
+                  </div>
+                  <div className="column is-narrow">
+                    <a
+                      className="is-size-4 community-link is-secondary-color is-uppercase"
+                      href="https://utensor.slack.com/join/shared_invite/zt-6vf9jocy-lzk5Aw11Z8M9GPf_KS5I~Q#/"
+                    >
+                      <img alt="slack" src={slack} width="20" ></img>
+                      Chat on Slack
+                    </a>
+                  </div>
+                  <div className="column is-narrow">
+                    <a
+                      className="is-size-4 community-link is-secondary-color is-uppercase"
+                      href="https://opencollective.com/utensorai"
+                    >
+                      <img alt="open collective" src={openCollective} width="20" ></img>
+                      Sponsor
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
