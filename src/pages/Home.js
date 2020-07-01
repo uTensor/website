@@ -88,7 +88,7 @@ class Index extends Component {
                 <div className="column is-narrow">
                   <a
                     className="is-size-6 community-link is-uppercase button"
-                    href="https://opencollective.com/utensorai"
+                    href="https://github.com/utensor"
                   >
                     <img alt="github" src={github} width="20" ></img>
                     Contribute
@@ -210,7 +210,7 @@ class Index extends Component {
                   <div className="column is-narrow">
                     <a
                       className="is-size-4 community-link is-secondary-color is-uppercase"
-                      href="https://opencollective.com/utensorai"
+                      href="https://github.com/utensor"
                     >
                       <img alt="github" src={github} width="20" ></img>
                       Contribute
