@@ -18,7 +18,7 @@ A graph-transformer accepts an input `ugraph`, modifies it, and returns an outpu
 The backend of uTensor Code-Generator is responsible for converting final `ugraph`s to a deployable model representation. The uTensor C++ code-generation is an example of the backend. Outputting other formats, such as RTL, C, TensorFlow Lite model, are also possible.
 
 ## Runtime Documentation
-The [uTensor runtime documentation](https://github.com/uTensor/uTensor/tree/re-arch-rc1) summarizes the design philosophy of the uTensor device-code. It also includes tutorials on how to extend the uTensor runtime.
+The [uTensor runtime documentation](https://github.com/uTensor/uTensor/blob/master/README.md) summarizes the design philosophy of the uTensor device-code. It also includes tutorials on how to extend the uTensor runtime.
 
 ## Addition Resource
 - [Why Edge Compute](https://medium.com/@stolendoggy/why-machine-learning-on-the-edge-92fac32105e6)
